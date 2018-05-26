@@ -1,0 +1,36 @@
+@import "./../variables";
+@import "./../mixins";
+
+$color-bg: $color-J;
+$color-bg--active: $color-I;
+
+.wheel {
+  position: relative;
+  margin: 2rem;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-color: $color-bg;
+  cursor: grab;
+  user-select: none;
+  filter: drop-shadow(0 2px 5px rgba(black, 0.2));
+  transition: background-color 0.3s ease-in-out;
+
+  &:after {
+    @include arrow-down(2rem, $color-bg);
+    position: absolute;
+    content: "";
+    bottom: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: border-top-color 0.3s ease-in-out;
+  }
+
+  &--dragging {
+    background-color: $color-bg--active;
+    cursor: grabbing !important;
+
+    &:after { border-top-color: $color-bg--active; }
+  }
+
+}

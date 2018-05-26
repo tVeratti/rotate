@@ -1,0 +1,22 @@
+@import "../variables";
+@import "../mixins";
+
+@include transition-group("view");
+
+.routes{
+  padding-top: 1rem;
+}
+
+.routes__views {
+  position: relative;
+}
+
+.view {
+  position: absolute;
+  border-radius: 1rem;
+  padding: 1rem;
+  padding-bottom: 20rem;
+  top: 0;
+  left: 24rem;
+  right: 0;
+}

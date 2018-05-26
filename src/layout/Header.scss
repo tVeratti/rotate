@@ -1,0 +1,20 @@
+@import "./../variables";
+
+.header{
+  display: flex;
+  align-items: flex-end;
+  background: $color-FF;
+  padding: 2rem 10% 0 10%;
+}
+
+#skiplinks {
+  display: none;
+  a{
+    position: absolute;
+    top: 0;
+    left: -9999px;
+    &:focus{
+      left: 0;
+    }
+  }
+}
